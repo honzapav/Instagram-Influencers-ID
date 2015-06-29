@@ -1,0 +1,65 @@
+body{
+    background:#eee;
+    font-family:Arial, Helvetica, sans-serif;
+}
+#wrapper{
+    width:1020px;
+    padding:20px;
+    margin:15px auto;
+    background:white;
+    border:1px solid #ccc;
+}
+a{  color:#517fa4;
+text-decoration:none;}
+h1{
+    text-align:center;
+    color:#517fa4;
+}
+h2,h3{
+    text-align:center;
+    color:#517fa4;
+}
+#inputform{
+    width:300px;
+    margin:10px auto 30px;
+}
+#inputform .vypln{
+    padding:8px 12px;
+    margin:3px auto;
+    width:91%;
+}
+#inputform .tlacitko{
+    padding:8px 12px;
+    margin:3px auto;
+    width:100%;
+}
+.tlacitko{
+    background:#005684;
+    color:white;
+    border:1px solid #07273E;
+    cursor:pointer;
+}
+.tlacitko:hover{
+    background:#07273E;
+}
+.okay{
+    color: #006600;
+    font-size:0.75em;
+    background:#99FF66;
+    border:1px solid #006600;
+    padding:8px;
+    text-align:center;
+    width:400px;
+    margin:0 auto 30px;
+}
+#vystupnidata{
+    font-size:0.85em;
+    width:100%;
+    margin:0 auto;
+}
+#vystupnidata td{
+    text-align:center;
+}
+.fullwidth{
+    width:100%;
+}
