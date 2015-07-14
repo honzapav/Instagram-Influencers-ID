@@ -1,17 +1,8 @@
 <?php
 session_start();
-set_time_limit(300); 
-  require_once 'Instagram.php';
-  require 'functions.php';
-    use MetzWeb\Instagram\Instagram;
-
-    $instagram = new Instagram(array(
-      'apiKey'      => 'your-api-key',
-      'apiSecret'   => 'your-api-secret',
-      'apiCallback' => 'your-callback-url' //must point to success.php
-    ));
-    $instagram->setAccessToken($_SESSION["inst_acc_token"]);    
-    ?>
+set_time_limit(300);
+require 'init.php';
+?>
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -57,7 +48,7 @@ while($data=mysql_fetch_assoc($sql)){
             ?>
            <br/>   <br/> <a href='submit.php?typ=uzivatele_v2'>Stáhnout kompletní uživatelská data</a>
            <br/>   
-            <a href="http://www.lovebrand.cz/instaapi/zpracuj-uzivatele.php"><div class="tlacitko" style="margin-top:10px;padding:8px 12px">Načíst další uživatelská data</div></a>
+            <a href="zpracuj-uzivatele.php"><div class="tlacitko" style="margin-top:10px;padding:8px 12px">Načíst další uživatelská data</div></a>
             <br/><br/> <a href='smazat.php?verze=users_v2' style="color:red;font-weight:bold">SMAZAT UŽIVATELSKÁ DATA</a><br/>
         </td>
     </tr>

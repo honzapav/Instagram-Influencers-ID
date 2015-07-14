@@ -1,15 +1,7 @@
 <?php
 session_start();
 set_time_limit(300); 
-require_once 'Instagram.php';
-require 'functions.php';
-use MetzWeb\Instagram\Instagram;
-$instagram = new Instagram(array(
-      'apiKey'      => 'your-api-key',
-      'apiSecret'   => 'your-api-secret',
-      'apiCallback' => 'your-callback-url' //must point to success.php
-    ));
-$instagram->setAccessToken($_SESSION["inst_acc_token"]);
+require 'init.php';
 $out=array();
 if(isset($_GET['username'])){
     $userid=getInstaID($_GET['username']);
@@ -86,7 +78,7 @@ if(isset($_GET['username'])){
            }
            if(!isset($_GET['page']))$page=1;else $page=$_GET['page']+1;
            if($page<6)header('Location: zpracuj.php?username='.$_GET['username'].'&page='.$page);
-            else header('Location: indexv2.php?ok=1');
+            else header('Location: index.php?ok=1');
             }            
             
 

@@ -1,15 +1,6 @@
 <?php
-
- session_start();
-require 'Instagram.php';
-use MetzWeb\Instagram\Instagram;
-// initialize class
-$instagram = new Instagram(array(
-      'apiKey'      => 'your-api-key',
-      'apiSecret'   => 'your-api-secret',
-      'apiCallback' => 'your-callback-url' //must point to success.php
-    ));
-   
+session_start();
+require 'init.php';
 // receive OAuth code parameter
 $code = $_GET['code'];
 // check whether the user has granted access
